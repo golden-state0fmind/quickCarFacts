@@ -1,0 +1,16 @@
+<div class='container'>
+    <h1 class='text-center'>My Car Maintenance</h1>
+    <p class='text-center'>
+        <a href="/repair">Whatever route I choose</a>
+    </p>
+    <!-- Will have to call repair from the href pointing to routes querying DB -->
+    <% repair.forEach(function (repair) { %>
+        <div>
+            <h2><%= repair.desc %></h2>
+            <form method='POST' action="/">
+                <input hidden type="text">
+                <button class='' type='sybmit'>Add Repair</button>
+            </form>
+        </div>
+    <%}) %>
+</div>
