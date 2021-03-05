@@ -1,3 +1,4 @@
-*{
-    background-color: bisque;
+body {
+    display: block;
+    background-image: URL("/public/img/carEngine.jpg");
 }
