@@ -13,15 +13,12 @@ app.use(require('morgan')('dev'))
 app.use(express.urlencoded({extended:false}))
 app.use(ejsLayouts)
 app.use(express.static(__dirname + '/public/'))
-
-
+//Home Page
 app.get('/', function (req, res) {
     res.render('index')
 })
-
 //Import all routes from the routes directory
 app.use('/repair',require('./routes/repair'))
-
 //Server
 let server = app.listen(port, function (){
     console.log('... listening on', port)
