@@ -2,3 +2,8 @@ body {
     display: block;
     background-color: bisque;
 }
+.repair-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
