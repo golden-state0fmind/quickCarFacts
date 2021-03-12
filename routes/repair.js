@@ -4,6 +4,9 @@ const db=null
 const router = express.Router()
 const axios=require('axios')
 
+//traverse the array for car info
+const carInfo=[];
+
 //Repair page
 router.get('/', function(req,res){
     const vin = req.query.vin;
@@ -17,6 +20,7 @@ router.get('/', function(req,res){
             'partner-token': process.env.PARTNER_TOKEN
         }})
     .then( response => {
+        const map = new Map(Object.entries(response.data))
         console.log(response.data)
     })
     .catch((error) => {
@@ -25,4 +29,7 @@ router.get('/', function(req,res){
     res.render('repair')
 })
 
+for(let i = 0; i < carInfo.length; i ++){
+    console.log(carInfo[i])
+}
 module.exports=router
