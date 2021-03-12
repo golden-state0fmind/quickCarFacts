@@ -4,5 +4,10 @@
 }
 body {
     display: block;
-    background-color: bisque;
+    background-color: #11B2EF;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
 }
